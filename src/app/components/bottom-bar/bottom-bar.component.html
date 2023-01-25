@@ -1,0 +1,82 @@
+<div class="bg-[#181818] fixed bottom-0 w-[100%] h-[90px] flex">
+  <div class="min-w-[200px] max-w-[385px] flex items-center px-3">
+    <img
+      class="h-[55px] w-[55px] flex"
+      src="assets/static/music_img.png"
+      alt="No Img"
+    />
+    <div class="flex ml-3 flex-grow items-center">
+      <div class="flex-col mr-3">
+        <p class="text-white line-clamp-1 text-[15px] font-bold">
+          Lauren (I Can't Stay Forever Cos I Have To Go)
+        </p>
+        <p class="text-gray-300 line-clamp-1 text-[12px] hover:text-white">
+          Oden & Fatzo, Other Artists Too
+        </p>
+      </div>
+      <div class="flex justify-end">
+        <mat-icon class="text-gray-300 text-xl hover:text-white"
+          >favorite_outline</mat-icon
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-grow min-w-[300px]">
+    <div class="flex flex-col mx-20 items-center h-[100%]">
+      <div class="flex w-[220px] justify-between h-[50px] pt-5 items-center">
+        <mat-icon class="text-gray-300 hover:text-white">shuffle</mat-icon>
+        <mat-icon class="text-gray-300 hover:text-white"
+          >skip_previous</mat-icon
+        >
+        <mat-icon class="text-white scale-150">pause_circle_filled</mat-icon>
+        <mat-icon class="text-gray-300 hover:text-white">skip_next</mat-icon>
+        <mat-icon class="text-gray-300 hover:text-white">repeat</mat-icon>
+      </div>
+      <div class="flex w-[100%] justify-between h-[40px] items-center">
+        <p class="text-gray-300 text-[12px]">2:10</p>
+
+        <mat-progress-bar
+          class="items-center mx-3 rounded-2xl"
+          color="primary"
+          mode="determinate"
+          value="75"
+        >
+        </mat-progress-bar>
+
+        <p class="text-gray-300 text-[12px]">3:40</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-[280px] my-auto px-3">
+    <div class="flex h-[30px] justify-between">
+      <mat-icon class="self-center text-gray-300 hover:text-white text-xl"
+        >mic_external_on</mat-icon
+      >
+      <mat-icon class="self-center text-gray-300 hover:text-white text-xl"
+        >queue_music</mat-icon
+      >
+      <mat-icon class="self-center text-gray-300 hover:text-white text-xl"
+        >devices</mat-icon
+      >
+      <div class="flex">
+        <mat-icon class="self-center text-gray-300 hover:text-white text-xl"
+          >volume_down_alt</mat-icon
+        >
+        <mat-progress-bar
+          class="rounded-2xl w-10 self-center"
+          color="primary"
+          mode="determinate"
+          value="95"
+          style="width: 70px"
+        >
+        </mat-progress-bar>
+      </div>
+
+      <mat-icon class="self-center text-gray-300 hover:text-white text-xl"
+        >open_in_full</mat-icon
+      >
+    </div>
+  </div>
+</div>
