@@ -1,1 +1,61 @@
-<p>header works!</p>
+<div class="fixed flex top-0 ml-[240px] w-screen h-[60px] bg-[#222222]">
+  <div class="flex items-center justify-between w-[100%] mr-[240px] px-10">
+    <div class="justify-between w-[70px] flex">
+      <mat-icon
+        class="text-gray-300 cursor-pointer bg-black rounded-full scale-125"
+        >chevron_left</mat-icon
+      >
+      <mat-icon
+        class="text-gray-300 cursor-not-allowed bg-black bg-opacity-50 text-opacity-50 rounded-full scale-125"
+        >chevron_right</mat-icon
+      >
+    </div>
+
+    <button
+      mat-button
+      [matMenuTriggerFor]="menu"
+      class="bg-black hover:bg-[#282828] w-[130px] flex justify-between rounded-full py-1 pr-1"
+    >
+      <img
+        class="h-[28px] w-[28px] rounded-full flex mx-1"
+        src="assets/static/user.jpg"
+        alt="No Img"
+      />
+      <p class="text-white font-bold">Pharalé</p>
+      <mat-icon class="text-gray-300 scale-125">arrow_drop_down</mat-icon>
+    </button>
+
+    <mat-menu
+      class="bg-[#282828] rounded w-[200px]"
+      xPosition="before"
+      #menu="matMenu"
+    >
+      <div
+        class="text-white hover:bg-[#3e3e3e] mx-1 rounded font-semibold cursor-pointer py-2 text-[14px] pl-4"
+      >
+        Account
+      </div>
+      <div
+        class="text-white hover:bg-[#3e3e3e] mx-1 rounded font-semibold cursor-pointer py-2 text-[14px] pl-4"
+      >
+        Profile
+      </div>
+      <div
+        class="text-white hover:bg-[#3e3e3e] mx-1 rounded font-semibold cursor-pointer py-2 text-[14px] pl-4"
+      >
+        Private session
+      </div>
+      <div
+        class="text-white hover:bg-[#3e3e3e] mx-1 rounded font-semibold cursor-pointer py-2 text-[14px] pl-4"
+      >
+        Settings
+      </div>
+      <hr class="mx-1 h-px border-1 border-gray-700" />
+      <div
+        class="text-white hover:bg-[#3e3e3e] mx-1 rounded font-semibold cursor-pointer py-2 text-[14px] pl-4"
+      >
+        Log out
+      </div>
+    </mat-menu>
+  </div>
+</div>
