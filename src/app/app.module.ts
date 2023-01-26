@@ -13,6 +13,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { LibraryComponent } from './pages/library/library.component';
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { CardBoxComponent } from './components/card-box/card-box.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { HomeComponent } from './pages/home/home.component';
     LibraryComponent,
     PlaylistComponent,
     HomeComponent,
+    CardBoxComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatIconModule,
     MatProgressBarModule,
     MatMenuModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,3 +1,22 @@
 <div class="mainClassScroll">
-  <p class="text-red-600">THIS IS LIBRARY</p>
+  <div class="mb-3 flex justify-between items-center">
+    <p class="text-white font-bold text-[22px]">Playlists</p>
+    <div class="flex items-center">
+      <div
+        class="flex p-1 mr-4 rounded-full hover:bg-[#2a2a2a] text-gray-400 hover:text-white"
+      >
+        <mat-icon class="hover:bg-[#2a2a2a]">search</mat-icon>
+      </div>
+      <div class="flex text-gray-400 hover:text-white">
+        <p class="font-bold text-[13px]">Most relevant</p>
+        <mat-icon class="">arrow_drop_down</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <mat-grid-list gutterSize="20" [cols]="cols" [rowHeight]="rowHeight">
+    <mat-grid-tile *ngFor="let card of featuredCards">
+      <app-card-box [card]="card"></app-card-box>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
