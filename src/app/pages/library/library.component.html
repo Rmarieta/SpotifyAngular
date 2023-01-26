@@ -3,16 +3,63 @@
     <p class="text-white font-bold text-[22px]">Playlists</p>
     <div class="flex items-center">
       <div
-        class="flex p-1 mr-4 rounded-full hover:bg-[#2a2a2a] text-gray-400 hover:text-white"
+        class="flex p-1 mr-4 cursor-pointer rounded-full hover:bg-[#2a2a2a] text-gray-400 hover:text-white"
       >
         <mat-icon class="hover:bg-[#2a2a2a]">search</mat-icon>
       </div>
-      <div class="flex text-gray-400 hover:text-white">
+      <div
+        mat-button
+        [matMenuTriggerFor]="menuRelevant"
+        class="flex text-gray-400 hover:text-white cursor-pointer"
+      >
         <p class="font-bold text-[13px]">Most relevant</p>
         <mat-icon class="">arrow_drop_down</mat-icon>
       </div>
     </div>
   </div>
+
+  <mat-menu
+    class="bg-[#282828] rounded w-[180px]"
+    xPosition="before"
+    #menuRelevant="matMenu"
+  >
+    <div
+      class="text-gray-400 text-[12px] hover:bg-[#3e3e3e] mx-1 rounded-sm font-semibold cursor-pointer py-2 pl-4"
+    >
+      Sort by
+    </div>
+    <div
+      class="text-[#65d46e] flex justify-between bg-[#3e3e3e] mx-1 rounded-sm font-semibold cursor-pointer py-2 text-[14px] pl-4"
+    >
+      Custom order
+      <mat-icon class="text-[#65d46e] mr-2">arrow_downward</mat-icon>
+    </div>
+    <div
+      class="text-white hover:bg-[#3e3e3e] mx-1 rounded-sm font-semibold cursor-pointer py-2 text-[14px] pl-4"
+    >
+      Title
+    </div>
+    <div
+      class="text-white hover:bg-[#3e3e3e] mx-1 rounded-sm font-semibold cursor-pointer py-2 text-[14px] pl-4"
+    >
+      Artist
+    </div>
+    <div
+      class="text-white hover:bg-[#3e3e3e] mx-1 rounded-sm font-semibold cursor-pointer py-2 text-[14px] pl-4"
+    >
+      Album
+    </div>
+    <div
+      class="text-white hover:bg-[#3e3e3e] mx-1 rounded-sm font-semibold cursor-pointer py-2 text-[14px] pl-4"
+    >
+      Date added
+    </div>
+    <div
+      class="text-white hover:bg-[#3e3e3e] mx-1 rounded-sm font-semibold cursor-pointer py-2 text-[14px] pl-4"
+    >
+      Duration
+    </div>
+  </mat-menu>
 
   <mat-grid-list gutterSize="20" [cols]="cols" [rowHeight]="rowHeight">
     <mat-grid-tile *ngFor="let card of featuredCards">
