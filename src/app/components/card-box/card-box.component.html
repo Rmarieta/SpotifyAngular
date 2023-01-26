@@ -1,0 +1,26 @@
+<div
+  class="bg-[#181818] hover:bg-[#282828] cursor-pointer transition duration-200 rounded-lg h-[100%] group"
+>
+  <div
+    class="z-20 transition ease-in opacity-0 group-hover:opacity-100 duration-300 absolute bottom-[38%] right-[15%] text-center"
+  >
+    <img
+      class="cursor-default"
+      src="assets/static/play_logo.png"
+      alt="No Img"
+      width="50"
+      height="50"
+    />
+  </div>
+  <div class="px-5 pt-5 pb-3">
+    <img class="rounded-lg" [src]="card?.image" alt="No Img" />
+  </div>
+  <div class="px-5 h-[90px]">
+    <p class="text-white font-bold text-[16px] line-clamp-1 mb-2">
+      {{ card?.name }}
+    </p>
+    <p class="text-gray-400 font-medium line-clamp-2 text-[13px]">
+      {{ card?.description }}
+    </p>
+  </div>
+</div>
